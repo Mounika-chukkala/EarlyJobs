@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: earlyjobs-ats
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm ci --prefix server && npm ci --prefix client && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: AUTO_SEED
+        value: "true"
