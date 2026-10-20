@@ -26,7 +26,7 @@ See **[CODEBASE.md](./CODEBASE.md)** for a plain-language tour of the whole proj
 
 ## Live demo
 
-Deployment is not live yet. Once the Render service is deployed, add its public URL here.
+**Live app:** [https://earlyjobs-ats.onrender.com](https://earlyjobs-ats.onrender.com)
 
 ## Deploy to Render
 
@@ -37,8 +37,6 @@ This repository includes a Render Blueprint (`render.yaml`) that builds and serv
 3. When prompted, enter the MongoDB Atlas connection string as `MONGODB_URI`. Keep it in Render's environment settings; never commit it to the repository.
 4. In MongoDB Atlas, allow the Render service's outbound IP addresses to connect. If you temporarily allow `0.0.0.0/0` for an assessment demo, use a dedicated database user with access only to this database and restrict network access again when possible.
 5. Wait for the service health check at `/api/health` to pass, then open the `onrender.com` URL shown in Render.
-6. Replace the pending message in **Live demo** above with the deployed URL.
-
 The Blueprint seeds the sample dataset into an empty Atlas database on first startup. The free Render service may take a short time to wake after inactivity.
 
 ## Project structure
